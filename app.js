@@ -41,11 +41,14 @@ f2ComparaValori.addEventListener("click", function(){
         f2Result.innerText = "Nu ati introdus numere, ati introdus caractere!";
 
     }else if(f2Numar01 < f2Numar02){
-        f2Result.innerText = "Rezultat = -1 " + ", numarul" + f2Numar01 + " este mai mic decat " + f2Numar02;
+        f2Result.innerText = "Rezultat = -1 " + ", numarul " + f2Numar01 + " este mai mic decat " + f2Numar02;
         f2Result.style.backgroundColor = "#f5e653";
-    }else if(f2Numar02 === f2Numar02){
+    }else if(f2Numar01 === f2Numar02){
         f2Result.innerText = "Rezultat = 0 " + ", numerele " + f2Numar01 + " si " + f2Numar02 + " sunt egale.";
         f2Result.style.backgroundColor = "#00e640";
+    }else if(f2Numar01 > f2Numar02){
+        f2Result.innerText = "Rezultat = 1 " + ", numarul " + f2Numar01 + " este mai mare decat " + f2Numar02;
+        f2Result.style.backgroundColor = "#d2527f";
     }
 });
 f2ReseteazaValori.addEventListener("click", function(){
