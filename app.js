@@ -7,7 +7,7 @@
         }
         return total;
     }
-    /* --- Suma numerelor naturale pozitive */
+    /* --- Verificare numar Par vs Impar */
     function numarParInpar(number, number_divided) {
         var status = "";
         if(number%number_divided === 1){
@@ -16,6 +16,20 @@
             var status = "Par";
         }
         return status;
+    }
+    /* -- Verificare numar prim */
+    function verificareNumarPrim(numar) {
+        for(var i = 2; i <= numar; i++){
+            var status = "";
+            switch(numar){
+                case numar === 2 :
+                    return status = "Numarul "+ numar + "ESTE NUMAR PRIM!";
+                    break;
+                case numar % i === 0 : 
+                    return status = "NU ESTE NUMAR PRIM!";
+                    break;
+            }
+        }
     }
 
 /* ----- Functia 01 - Comparare Valori ----- */
@@ -165,10 +179,8 @@
         if(isNaN(f6Numar02) || f6Numar02 === "" ){
             f6Result.innerText = "Sintagma " + f6Numar02 + " nu este numar";
         }else {
-            f6Result.innerText = "Numarul " + f6Numar02 + " este "+ numarParInpar(f6Numar02, 2);
+            f6Result.innerText = "Numarul " + f6Numar02 + " " + verificareNumarPrim(f6Numar02);
         }
-        
-        
     });
     f6ReseteazaValori.addEventListener("click", function(){
         document.getElementById('f6numar02').value = "";
